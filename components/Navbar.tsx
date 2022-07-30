@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import LinkButton from './LinkButton';
+import LinkButton from '../mui/LinkButton';
 import { CircularProgress } from '@mui/material';
 import { useUser } from '@auth0/nextjs-auth0';
 
