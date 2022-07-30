@@ -1,8 +1,18 @@
+import React, { PropsWithChildren } from "react";
+import { AppProps } from 'next/app';
+import { UserProvider } from '@auth0/nextjs-auth0';
+import Layout from '../components/Layout';
 
-import type { AppProps } from 'next/app'
+const MyApp: React.FC<PropsWithChildren<AppProps>> = ({ Component, pageProps }) => {
+  return (
+    <UserProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </UserProvider>
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  )
 }
 
-export default MyApp
+
+export default MyApp;
