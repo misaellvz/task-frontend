@@ -17,7 +17,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@graphql/*": ["graphql/*"],
+      "@mui/*": ["graphql/*"],
+    }
   },
   "include": [
     "next-env.d.ts",

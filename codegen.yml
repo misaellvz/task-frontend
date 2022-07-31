@@ -1,8 +1,8 @@
 overwrite: true
 schema: '${API_URL}'
-documents: './service/queries.graphql'
+documents: './graphql/queries.graphql'
 generates:
-  service/graphql.tsx:
+  graphql/graphql.tsx:
     plugins:
       - 'typescript'
       - 'typescript-operations'
