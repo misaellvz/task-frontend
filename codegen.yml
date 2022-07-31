@@ -1,0 +1,12 @@
+overwrite: true
+schema: '${API_URL}'
+documents: './service/queries.graphql'
+generates:
+  service/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typed-document-node'
+    config:
+      avoidOptionals: true
+      maybeValue: 'T | null'

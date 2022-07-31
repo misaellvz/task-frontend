@@ -1,0 +1,43 @@
+scalar ObjectId
+
+fragment Task on Task {
+  _id
+  description
+  isCompleted
+}
+
+query GetAllTasks {
+  tasks {
+    ...Task
+  }
+}
+
+query GetTaskById($id: ObjectId!) {
+  task(id: $id) {
+    ...Task
+  }
+}
+
+mutation CreateTask($data: CreateTaskDto!) {
+  createTask(input: $data) {
+    ...Task
+  }
+}
+
+mutation DeleteTask($id: ObjectId!) {
+  deleteTask(id: $id) {
+    ...Task
+  }
+}
+
+mutation UpdateTask($id: ObjectId!, $data: UpdateTaskDto!) {
+  updateTask(id: $id, input: $data) {
+    ...Task
+  }
+}
+
+mutation UpdateTaskCompleteStatus($id: ObjectId!) {
+  updateTaskCompleteStatus(id: $id) {
+    ...Task
+  }
+}
