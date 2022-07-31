@@ -36,7 +36,7 @@ const TaskForm: React.FC<TaskFormProps> = (props) => {
           error={formik.touched.description && Boolean(formik.errors.description)}
           helperText={formik.touched.description && formik.errors.description}
         />
-        {!isEdit && <AddButton type="submit" />}
+        {!isEdit && <AddButton type="submit" data-testid="task-add-button" />}
         {isEdit && <SaveButton type="submit" />}
       </CenteredBox>
     </form>
